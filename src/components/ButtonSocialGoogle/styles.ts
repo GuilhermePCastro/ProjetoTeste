@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
+import {TouchableOpacity } from 'react-native'
 
-export const Button = styled(RectButton)`
+export const Button = styled.TouchableOpacity`
     width: ${RFValue(140)}px;
     height: ${RFValue(60)}px;
     align-items: center;

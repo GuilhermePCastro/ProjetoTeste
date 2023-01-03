@@ -9,7 +9,7 @@ interface InputProps {
     leftIcon?: boolean;
     iconLeftName?: React.ComponentProps<typeof Ionicons>["name"];
     iconRightName?: React.ComponentProps<typeof Ionicons>["name"];
-
+    placeholder?:string;
 }
 
 const input: React.FC<InputProps> = ({ rightIcon, leftIcon, iconLeftName, iconRightName, ...rest }) => {
@@ -23,7 +23,7 @@ const input: React.FC<InputProps> = ({ rightIcon, leftIcon, iconLeftName, iconRi
                     name={iconLeftName}
                     size={24}
                     color={COLORS.GRAY4}
-                    style={{ padding: 5, paddingRight: 10}}
+                    style={{ padding: 5, paddingRight: 10, marginBottom: 4}}
                 />
             )}
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button, IconeGoole, Title } from './styles';
 import PngGoogle from "../../assets/google.png";
-import { RectButtonProps } from 'react-native-gesture-handler';
+import { TouchableOpacityProps } from 'react-native';
 
-interface Props extends RectButtonProps{
+interface Props extends TouchableOpacityProps{
     title: string
 }
 

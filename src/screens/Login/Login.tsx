@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
 import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
 import Input from '../../components/input/input';
+import { Button } from '../../components/Button/Button'
 
 import {
     Container,
@@ -29,7 +30,7 @@ const Login: React.FC = () => {
                     <ViewButton>
 
                         <ButtonSocialGoogle title="Google" />
-                        <ButtonSocialFacebook iconName="facebook-f" title="Facebook" size={24} />
+                        <ButtonSocialFacebook iconName="facebook-square" title="Facebook" size={24} />
 
                     </ViewButton>
 
@@ -46,6 +47,13 @@ const Login: React.FC = () => {
                         iconRightName='eye-off-outline'
                         iconLeftName='lock-closed-outline'
                         placeholder='Senha'/>
+
+                    <Button
+                        title="Entrar"
+                        onPress={()=>{}}
+                        variant='primary'
+
+                    />
 
                 </ContentBody>
 
