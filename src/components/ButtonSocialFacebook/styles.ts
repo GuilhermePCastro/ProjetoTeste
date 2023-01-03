@@ -1,6 +1,12 @@
 import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 import { RFValue } from 'react-native-responsive-fontsize';
+import { FontAwesome } from '@expo/vector-icons';
+
+export const IconeFacebook = styled(FontAwesome)`
+    color: ${({ theme }) => theme.COLORS.WHITE};
+`;
+
 
 export const Button = styled(RectButton)`
     width: ${RFValue(140)}px;
@@ -10,10 +16,9 @@ export const Button = styled(RectButton)`
     flex-direction: row;
     margin-left: ${RFValue(10)}px;
     border-radius: ${RFValue(15)}px;
-
-    box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
     background-color: ${({ theme }) => theme.COLORS.TYPOSOCIAL};
 `;
+
 
 
 export const Title = styled.Text`

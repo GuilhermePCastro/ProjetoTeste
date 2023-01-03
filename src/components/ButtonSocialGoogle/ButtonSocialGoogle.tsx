@@ -9,7 +9,7 @@ interface Props extends RectButtonProps{
 
 const ButtonSocialGoogle: React.FC<Props> = ({ title, ...rest}) => {
     return (
-        <Button {...rest}>
+        <Button {...rest} style={{ elevation: 2}}>
             <IconeGoole source={PngGoogle} resizeMode="contain"/>
             <Title>{title}</Title>
         </Button>

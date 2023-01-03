@@ -2,6 +2,7 @@ import { ButtonSocialFacebook } from '../../components/ButtonSocialFacebook/Butt
 import React from 'react';
 import { SafeAreaView, Text } from 'react-native';
 import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
+import Input from '../../components/input/input';
 
 import {
     Container,
@@ -16,35 +17,45 @@ import {
 
 
 const Login: React.FC = () => {
-  return (
-    <SafeAreaView>
-        <Container>
-            <ContentHeader>
+    return (
+        <SafeAreaView>
+            <Container>
+                <ContentHeader>
 
-                <Title>Seja bem-vindo(a) {"\n"} ao WalletApp</Title>
+                    <Title>Seja bem-vindo(a) {"\n"} ao WalletApp</Title>
 
-                <Descripition>Entrar com rede sociais</Descripition>
+                    <Descripition>Entrar com rede sociais</Descripition>
 
-                <ViewButton>
+                    <ViewButton>
 
-                    <ButtonSocialGoogle title="Google" />
-                    <ButtonSocialFacebook title="Facebook" />
+                        <ButtonSocialGoogle title="Google" />
+                        <ButtonSocialFacebook iconName="facebook-f" title="Facebook" size={24} />
 
-                </ViewButton>
+                    </ViewButton>
 
-            </ContentHeader>
+                </ContentHeader>
 
-            <ContentBody>
+                <ContentBody>
+                    <Input
+                        iconLeftName="mail-outline"
+                        leftIcon
+                        placeholder='E-mail' />
+                    <Input
+                        leftIcon
+                        rightIcon
+                        iconRightName='eye-off-outline'
+                        iconLeftName='lock-closed-outline'
+                        placeholder='Senha'/>
 
-            </ContentBody>
+                </ContentBody>
 
-            <ContentFooter>
+                <ContentFooter>
 
-            </ContentFooter>
+                </ContentFooter>
 
-        </Container>
-    </SafeAreaView>
-  );
+            </Container>
+        </SafeAreaView>
+    );
 }
 
-export {Login};
+export { Login };

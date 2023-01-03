@@ -10,8 +10,6 @@ export const Button = styled(RectButton)`
     flex-direction: row;
     margin-left: ${RFValue(10)}px;
     border-radius: ${RFValue(15)}px;
-
-    box-shadow: 1px 3px 3px rgba(0,0,0,0.2);
     background-color: ${({ theme }) => theme.COLORS.GRAY6};
 `;
 
