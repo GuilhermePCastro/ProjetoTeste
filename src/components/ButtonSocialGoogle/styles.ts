@@ -4,12 +4,11 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import {TouchableOpacity } from 'react-native'
 
 export const Button = styled.TouchableOpacity`
-    width: ${RFValue(140)}px;
-    height: ${RFValue(60)}px;
+    width: 55%;
+    height: ${RFValue(55)}px;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    margin-left: ${RFValue(10)}px;
     border-radius: ${RFValue(15)}px;
     background-color: ${({ theme }) => theme.COLORS.GRAY6};
 `;

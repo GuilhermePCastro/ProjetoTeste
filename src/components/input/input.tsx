@@ -1,20 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Ionicons } from '@expo/vector-icons'
 import { Container, InputContainer } from './styles';
 import { useTheme } from 'styled-components';
+import { TouchableOpacity, TextInputProps } from 'react-native';
 
 
-interface InputProps {
-    rightIcon?: boolean;
+interface InputProps extends TextInputProps{
     leftIcon?: boolean;
     iconLeftName?: React.ComponentProps<typeof Ionicons>["name"];
-    iconRightName?: React.ComponentProps<typeof Ionicons>["name"];
-    placeholder?:string;
+    secureTextEntry?:boolean;
 }
 
-const input: React.FC<InputProps> = ({ rightIcon, leftIcon, iconLeftName, iconRightName, ...rest }) => {
+const input: React.FC<InputProps> = ({leftIcon, iconLeftName, secureTextEntry, ...rest }) => {
 
+    const [secury, setSecury] = useState(secureTextEntry);
     const { COLORS } = useTheme();
+
+    function verificouSenha(){
+        setSecury(!secury);
+    }
 
     return (
         <Container>
@@ -28,15 +32,20 @@ const input: React.FC<InputProps> = ({ rightIcon, leftIcon, iconLeftName, iconRi
             )}
 
             <InputContainer {...rest}
-            placeholderTextColor={COLORS.GRAY4} />
+                secureTextEntry={secury}
+                underlineColorAndroid='transparent'
+                placeholderTextColor={COLORS.GRAY4}
+            />
 
-            {rightIcon && (
-                <Ionicons
-                    name={iconRightName}
-                    size={24}
-                    color={COLORS.GRAY4}
-                    style={{ padding: 5, paddingLeft: 10}}
-                />
+            {secureTextEntry && (
+                <TouchableOpacity onPress={verificouSenha}>
+                    <Ionicons
+                        name={secury ? 'eye-outline' : 'eye-off-outline'}
+                        size={24}
+                        color={COLORS.GRAY4}
+                        style={{ padding: 5, paddingLeft: 10}}
+                    />
+                </TouchableOpacity>
             )}
         </Container>
     );

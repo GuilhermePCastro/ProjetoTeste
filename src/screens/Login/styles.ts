@@ -7,8 +7,9 @@ export const Container = styled.View`
 
 export const ContentHeader = styled.View`
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: ${RFValue(20)}px;
+    width: 100%;
 `;
 
 export const ContentBody = styled.View`
@@ -33,4 +34,5 @@ export const Descripition = styled.Text`
 
 export const ViewButton = styled.View`
     flex-direction: row;
+    justify-content: space-between;
 `;

@@ -18,9 +18,9 @@ export const Container = styled.View`
 export const InputContainer = styled.TextInput`
     flex: 1;
     border: 0;
-    height: ${RFValue(50)}px;
+    height: ${RFValue(55)}px;
     border-radius: ${RFValue(10)}px;
     font-family:  ${({theme}) => theme.FONTS.POPPINSLIGHT};
-    font-size: ${RFValue(16)}px;
+    font-size: ${RFValue(14)}px;
 `;
 

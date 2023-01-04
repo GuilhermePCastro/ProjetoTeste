@@ -29,7 +29,7 @@ const Login: React.FC = () => {
 
                     <ViewButton>
 
-                        <ButtonSocialGoogle title="Google" />
+                        <ButtonSocialGoogle title="Google"/>
                         <ButtonSocialFacebook iconName="facebook-square" title="Facebook" size={24} />
 
                     </ViewButton>
@@ -40,12 +40,17 @@ const Login: React.FC = () => {
                     <Input
                         iconLeftName="mail-outline"
                         leftIcon
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        keyboardType='email-address'
                         placeholder='E-mail' />
                     <Input
                         leftIcon
-                        rightIcon
-                        iconRightName='eye-off-outline'
+                        secureTextEntry
                         iconLeftName='lock-closed-outline'
+                        autoCorrect={false}
+                        autoCapitalize="none"
+                        keyboardType='default'
                         placeholder='Senha'/>
 
                     <Button
