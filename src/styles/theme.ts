@@ -24,6 +24,7 @@ export default {
         BLUE2: '#2D9CDB',
         BLUE1: '#2F80ED',
         BLUE: '#4368C7',
+        INPUTCOLOR: '#E5E5E5',
         GRAY6: '#F2F2F2',
         GRAY5: '#E0E0E0',
         GRAY4: '#BDBDBD',

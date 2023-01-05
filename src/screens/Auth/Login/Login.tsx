@@ -1,9 +1,9 @@
-import { ButtonSocialFacebook } from '../../components/ButtonSocialFacebook/ButtonSocialFacebook';
+import { ButtonSocialFacebook } from './../../../components/ButtonSocialFacebook/ButtonSocialFacebook';
 import React from 'react';
 import { SafeAreaView, Text, KeyboardAvoidingView } from 'react-native';
-import { ButtonSocialGoogle } from '../../components/ButtonSocialGoogle/ButtonSocialGoogle';
-import Input from '../../components/input/input';
-import { Button } from '../../components/Button/Button'
+import { ButtonSocialGoogle } from './../../../components/ButtonSocialGoogle/ButtonSocialGoogle';
+import Input from './../../../components/input/input';
+import { Button } from './../../../components/Button'
 
 import {
     Container,
@@ -22,8 +22,22 @@ import {
 } from './styles';
 
 
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const Login: React.FC = () => {
+
+    const navigation = useNavigation();
+
+    const handleCadastro = () =>{
+        navigation.navigate('Cadastro');
+    }
+
+    const handleRecuperarSenha = () =>{
+        navigation.navigate('RecuperarSenha');
+    }
+
     return (
         <SafeAreaView>
             <KeyboardAvoidingView
@@ -67,7 +81,7 @@ const Login: React.FC = () => {
                             placeholder='Senha'/>
 
                         <ContentForgotPassword>
-                            <ButtonForgot onPress={() => {}}>
+                            <ButtonForgot onPress={handleRecuperarSenha}>
                                 <TextForgotPassword>Esqueceu a sua senha ?</TextForgotPassword>
                             </ButtonForgot>
                         </ContentForgotPassword>
@@ -82,7 +96,7 @@ const Login: React.FC = () => {
                     </ContentBody>
 
                     <ContentFooter>
-                        <ButtonSingUp style={{marginTop: 20}} onPress={() => {}}>
+                        <ButtonSingUp style={{marginTop: 20}} onPress={handleCadastro}>
                             <TitleButtomSingUp>Não tem cadastro ainda ? <Link>Cadastre-se</Link></TitleButtomSingUp>
                         </ButtonSingUp>
                     </ContentFooter>
