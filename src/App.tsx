@@ -1,6 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native";
-import AppLoading from "expo-app-loading";
+import { View, ActivityIndicator, Text } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import { StatusBar } from "expo-status-bar";
 
@@ -35,7 +34,7 @@ const App: React.FC = () => {
     })
 
     if (!fontsLoad) {
-        return <AppLoading />
+        return <ActivityIndicator />
     }
 
     return (
@@ -43,20 +42,16 @@ const App: React.FC = () => {
 
             <NavigationContainer>
 
-                <StatusBar
-                    style="dark"
-                    translucent
-                    backgroundColor="transparent"
-                />
+                <StatusBar style="dark" translucent backgroundColor="transparent" />
 
                 <View
                     style={{
-                        flex: 1
+                        flex: 1,
+                        backgroundColor: COLORS.COLORS.WHITE_100,
                     }}
                 >
                     <Routes />
                 </View>
-
 
             </NavigationContainer>
 

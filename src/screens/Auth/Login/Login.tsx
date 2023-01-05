@@ -30,13 +30,14 @@ const Login: React.FC = () => {
 
     const navigation = useNavigation();
 
-    const handleCadastro = () =>{
+    const handleCadastro = () => {
         navigation.navigate('Cadastro');
     }
 
-    const handleRecuperarSenha = () =>{
+    const handleRecuperarSenha = () => {
         navigation.navigate('RecuperarSenha');
     }
+
 
     return (
         <SafeAreaView>

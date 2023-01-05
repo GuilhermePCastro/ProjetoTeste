@@ -10,10 +10,14 @@ const { Navigator, Screen } = createNativeStackNavigator();
 export const AuthRoutes = () => {
     return (
         <Navigator
-            initialRouteName='Cadastro'
+            initialRouteName='Login'
             screenOptions={{
                 headerShown: false,
+                title: 'WalletApp',
             }}
+
+
+
         >
             <Screen name='Login' component={Login} />
             <Screen
@@ -22,7 +26,6 @@ export const AuthRoutes = () => {
                 options={{
                     headerShown: true,
                 }}
-
             />
             <Screen name='RecuperarSenha' component={RecuperarSenha} />
         </Navigator>
