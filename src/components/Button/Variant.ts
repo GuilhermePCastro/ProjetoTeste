@@ -10,6 +10,7 @@ interface ButtonStyle{
     };
     title: {
         color: string;
+        textDecorationLine?:string;
     };
     icon:{
         color: string;
@@ -100,9 +101,37 @@ const buttonBlack: ButtonVariant = {
     },
 }
 
+const buttonTransparent: ButtonVariant = {
+    enabled: {
+        button: {
+            backgroundColor: "transparent",
+        },
+        title: {
+            color: COLORS.PURPLEDARK1,
+            textDecorationLine: "underline",
+        },
+        icon: {
+            color: COLORS.PURPLEDARK1,
+        },
+    },
+    disabled: {
+        button: {
+            backgroundColor: "transparent",
+        },
+        title: {
+            color: COLORS.GRAY2,
+            textDecorationLine: "underline",
+        },
+        icon: {
+            color: COLORS.GRAY2,
+        },
+    },
+}
+
 export const variants = {
     primary: buttonPrimary,
     outline: buttonOutline,
-    black: buttonBlack
+    black: buttonBlack,
+    transparent: buttonTransparent
 }
 
