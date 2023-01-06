@@ -16,17 +16,9 @@ export const AuthRoutes = () => {
                 title: 'WalletApp',
             }}
 
-
-
         >
             <Screen name='Login' component={Login} />
-            <Screen
-                name='Cadastro'
-                component={Cadastro}
-                options={{
-                    headerShown: true,
-                }}
-            />
+            <Screen name='Cadastro' component={Cadastro}/>
             <Screen name='RecuperarSenha' component={RecuperarSenha} />
         </Navigator>
     )

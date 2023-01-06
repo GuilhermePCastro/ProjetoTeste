@@ -1,5 +1,5 @@
 import React from "react";
-import { View, ActivityIndicator, Text } from "react-native";
+import { View, ActivityIndicator, Text, SafeAreaView } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import { StatusBar } from "expo-status-bar";
 
@@ -41,8 +41,8 @@ const App: React.FC = () => {
         <ThemeProvider theme={COLORS}>
 
             <NavigationContainer>
-
-                <StatusBar style="dark" translucent backgroundColor="transparent" />
+                
+            <StatusBar style="dark" translucent backgroundColor="transparent" />
 
                 <View
                     style={{
@@ -50,7 +50,7 @@ const App: React.FC = () => {
                         backgroundColor: COLORS.COLORS.WHITE_100,
                     }}
                 >
-                    <Routes />
+                    <Routes/>
                 </View>
 
             </NavigationContainer>

@@ -25,7 +25,8 @@ export const Title = styled.Text`
     font-size: ${RFValue(25)}px;
     text-align: center;
     font-family: ${({ theme }) => theme.FONTS.POPPINSMEDIUM};
-    margin-top: ${RFValue(50)}px;;
+    margin-top: ${RFValue(50)}px;
+    color: ${({ theme }) => theme.COLORS.PURPLEDARK2};
 `;
 
 export const Descripition = styled.Text`

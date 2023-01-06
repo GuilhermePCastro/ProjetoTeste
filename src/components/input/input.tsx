@@ -26,7 +26,7 @@ const input: React.FC<InputProps> = ({leftIcon, iconLeftName, secureTextEntry, .
                 <Ionicons
                     name={iconLeftName}
                     size={24}
-                    color={COLORS.GRAY4}
+                    color={COLORS.GRAY3}
                     style={{ padding: 5, paddingRight: 10, marginBottom: 4}}
                 />
             )}
@@ -34,7 +34,7 @@ const input: React.FC<InputProps> = ({leftIcon, iconLeftName, secureTextEntry, .
             <InputContainer {...rest}
                 secureTextEntry={secury}
                 underlineColorAndroid='transparent'
-                placeholderTextColor={COLORS.GRAY4}
+                placeholderTextColor={COLORS.GRAY3}
             />
 
             {secureTextEntry && (
@@ -42,7 +42,7 @@ const input: React.FC<InputProps> = ({leftIcon, iconLeftName, secureTextEntry, .
                     <Ionicons
                         name={secury ? 'eye-outline' : 'eye-off-outline'}
                         size={24}
-                        color={COLORS.GRAY4}
+                        color={COLORS.GRAY3}
                         style={{ padding: 5, paddingLeft: 10}}
                     />
                 </TouchableOpacity>
