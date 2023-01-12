@@ -1,19 +1,22 @@
 import React from 'react';
 import { SafeAreaView, Text, KeyboardAvoidingView } from 'react-native';
 import {
-    Container,
     ContentHeader,
-    Title,
-    Descripition,
     ContentBody,
     ContentFooter,
-    TextButton,
-    TitleTextButton,
-    Link,
 } from './styles';
 import Input from './../../../components/input'
 import { Button } from './../../../components/Button';
 import { useNavigation } from '@react-navigation/native';
+
+import {
+    Container,
+    Title,
+    Descripition,
+    Link,
+    TextButton,
+    TitleTextButton,
+ } from './../../../styles/stylesPadrao'
 
 const Cadastro: React.FC = () => {
 
@@ -25,54 +28,59 @@ const Cadastro: React.FC = () => {
 
     return (
         <SafeAreaView>
-            <Container>
+            <KeyboardAvoidingView
+                behavior='height'
+                enabled
+            >
+                <Container>
 
-                <ContentHeader>
-                    <Title>Sinta imediatamente a facilidade de transação apenas se cadastrando</Title>
-                    <Descripition>Preencha os dados abaixo</Descripition>
-                </ContentHeader>
+                    <ContentHeader>
+                        <Title>Sinta imediatamente a facilidade de transação apenas se cadastrando</Title>
+                        <Descripition>Preencha os dados abaixo</Descripition>
+                    </ContentHeader>
 
-                <ContentBody>
-                    <Input
-                        iconLeftName='person-outline'
-                        placeholder='Nome'
-                        leftIcon
-                    />
-                    <Input
-                        iconLeftName='mail-outline'
-                        placeholder='E-mail'
-                        leftIcon
-                        autoCorrect={false}
-                        autoCapitalize="none"
-                        keyboardType='email-address'
-                    />
-                    <Input
-                        placeholder='Senha'
-                        leftIcon
-                        secureTextEntry
-                        autoCorrect={false}
-                        autoCapitalize="none"
-                        iconLeftName='lock-closed-outline'
-                    />
+                    <ContentBody>
+                        <Input
+                            iconLeftName='person-outline'
+                            placeholder='Nome'
+                            leftIcon
+                        />
+                        <Input
+                            iconLeftName='mail-outline'
+                            placeholder='E-mail'
+                            leftIcon
+                            autoCorrect={false}
+                            autoCapitalize="none"
+                            keyboardType='email-address'
+                        />
+                        <Input
+                            placeholder='Senha'
+                            leftIcon
+                            secureTextEntry
+                            autoCorrect={false}
+                            autoCapitalize="none"
+                            iconLeftName='lock-closed-outline'
+                        />
 
-                    <Button
-                        title='Cadastrar'
-                        onPress={handleLogin}
-                    />
+                        <Button
+                            title='Cadastrar'
+                            onPress={handleLogin}
+                        />
 
 
 
-                </ContentBody>
+                    </ContentBody>
 
-                <ContentFooter>
+                    <ContentFooter>
 
-                    <TextButton onPress={handleLogin}>
-                        <TitleTextButton>Já tem um conta ? <Link>Login</Link></TitleTextButton>
-                    </TextButton>
+                        <TextButton onPress={handleLogin}>
+                            <TitleTextButton>Já tem um conta ? <Link>Login</Link></TitleTextButton>
+                        </TextButton>
 
-                </ContentFooter>
+                    </ContentFooter>
 
-            </Container>
+                </Container>
+            </KeyboardAvoidingView>
         </SafeAreaView>
     );
 }

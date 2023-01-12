@@ -4,18 +4,20 @@ import { SafeAreaView, Text, KeyboardAvoidingView } from 'react-native';
 import { ButtonSocialGoogle } from './../../../components/ButtonSocialGoogle/ButtonSocialGoogle';
 import Input from './../../../components/input/input';
 import { Button } from './../../../components/Button'
-
 import {
     Container,
+    Title,
+    Descripition,
+    Link,
+ } from './../../../styles/stylesPadrao'
+
+import {
     ContentHeader,
     ContentBody,
     ContentFooter,
-    Title,
-    Descripition,
     ViewButton,
     ButtonSingUp,
     TitleButtomSingUp,
-    Link,
     ContentForgotPassword,
     TextForgotPassword,
     ButtonForgot,
